@@ -1,0 +1,26 @@
+// 
+// Sample VsCode In-Container Debugger Setup 
+// 
+// This content needs to make its way into the container, in 
+// ${workspaceFolder}/.vscode/launch.json 
+// 
+// Also requires the `cppdbg` extension. 
+// An initial attempt at invoking the debugger should generate a prompt to install this. 
+// 
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C++ Launch",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/debug/src/ngspice",
+            "args": [
+                "-b",
+                "-a",
+                "circuit.sp"
+            ],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
